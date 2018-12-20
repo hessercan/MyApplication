@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AvrilLavigne" />
+        <activity android:name=".BonJovi" />
+        <activity android:name=".OldVersion"></activity>
     </application>
 
 </manifest>

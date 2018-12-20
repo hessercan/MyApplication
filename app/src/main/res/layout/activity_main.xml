@@ -6,51 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/genericButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
-        app:layout_constraintVertical_bias="0.742" />
-
-    <TextView
-        android:id="@+id/nameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/genericButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editNameText" />
-
-    <EditText
-        android:id="@+id/editNameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/nameTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/versionCheckMessage" />
-
     <TextView
         android:id="@+id/versionCheckMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Version Message"
-        app:layout_constraintBottom_toTopOf="@+id/editNameText"
+        android:layout_marginTop="16dp"
+        android:text="@string/version_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/avril_imagebtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:onClick="startAvrilView"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/avril_comment"
+        app:layout_constraintEnd_toStartOf="@+id/bonjovi_imagebtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/versionCheckMessage"
+        app:srcCompat="@drawable/avril_lavigne" />
+
+    <ImageButton
+        android:id="@+id/bonjovi_imagebtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="startBonJoviView"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/bonjovi_comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/avril_imagebtn"
+        app:layout_constraintTop_toBottomOf="@+id/versionCheckMessage"
+        app:srcCompat="@drawable/bon_jovi" />
+
+    <TextView
+        android:id="@+id/avril_comment"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bonjovi_comment"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avril_imagebtn" />
+
+    <TextView
+        android:id="@+id/bonjovi_comment"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/avril_comment"
+        app:layout_constraintTop_toBottomOf="@+id/bonjovi_imagebtn" />
 
 </android.support.constraint.ConstraintLayout>
