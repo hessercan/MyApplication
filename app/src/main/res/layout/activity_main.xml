@@ -17,71 +17,100 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/welcomeUser_TextView"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Welcome: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/avril_imagebtn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
         android:adjustViewBounds="false"
+        android:contentDescription="avril"
         android:cropToPadding="false"
-        android:onClick="startAvrilView"
+        android:onClick="startAvrilActivity"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/avril_comment"
-        app:layout_constraintEnd_toStartOf="@+id/bonjovi_imagebtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/versionCheckMessage"
-        app:srcCompat="@drawable/avril_lavigne" />
-
-    <ImageButton
-        android:id="@+id/bonjovi_imagebtn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:onClick="startBonJoviView"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/bonjovi_comment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/avril_imagebtn"
-        app:layout_constraintTop_toBottomOf="@+id/versionCheckMessage"
-        app:srcCompat="@drawable/bon_jovi" />
-
-    <TextView
-        android:id="@+id/avril_comment"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/bonjovi_comment"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/avril_imagebtn" />
-
-    <TextView
-        android:id="@+id/bonjovi_comment"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/avril_comment"
-        app:layout_constraintTop_toBottomOf="@+id/bonjovi_imagebtn" />
-
-    <fragment
-        android:id="@+id/logoFragMain"
-        android:name="com.hessercan.myapplication.LogoFragment"
-        android:layout_width="356dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.982" />
+        app:srcCompat="@drawable/avril_lavigne" />
+
+    <ImageButton
+        android:id="@+id/bonjovi_imagebtn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="jovi"
+        android:onClick="startBonJoviActivity"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avrilRating"
+        app:srcCompat="@drawable/bon_jovi" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginLeft="162dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginRight="162dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="startLoginActivity"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/avrilRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:isIndicator="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avril_imagebtn" />
+
+    <RatingBar
+        android:id="@+id/joviRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:focusable="true"
+        android:isIndicator="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bonjovi_imagebtn"
+        tools:clickable="true" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.hessercan.myapplication.LogoFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_logo" />
 
 </android.support.constraint.ConstraintLayout>

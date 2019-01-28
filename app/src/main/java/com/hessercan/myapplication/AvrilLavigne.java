@@ -1,31 +1,40 @@
 package com.hessercan.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 public class AvrilLavigne extends AppCompatActivity {
+
+    private RatingBar avrilRatingBar;
+    SharedPreferences prefs;
+    private String username = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avril_lavigne);
+        username = getIntent().getStringExtra("username");
+        prefs = getSharedPreferences(username + "_PREFS", MODE_PRIVATE);
+        avrilRatingBar = findViewById(R.id.avril_ratingBar);
+        avrilRatingBar.setRating(prefs.getFloat("Avril Rating", 0));
 
-        EditText avrilCommentText = findViewById(R.id.avril_editText);
-        avrilCommentText.setText(getIntent().getStringExtra("Avril Comment"));
     }
 
-    private String getAvrilComment() {
-        EditText avrilCommentText = findViewById(R.id.avril_editText);
-        return avrilCommentText.getText().toString();
+    private void saveRating(){
+        prefs.edit().putFloat("Avril Rating", avrilRatingBar.getRating()).commit();
     }
 
     public void goHome(View view) {
-        Intent goHomeIntent = new Intent(this,MainActivity.class);
-        goHomeIntent.putExtra("Avril Comment", getAvrilComment());
-        goHomeIntent.putExtra("Jovi Comment", getIntent().getStringExtra("Jovi Comment"));
+        Intent goHomeIntent = new Intent(this, MainActivity.class);
+        saveRating();
         startActivity(goHomeIntent);
+        finish();
     }
 }

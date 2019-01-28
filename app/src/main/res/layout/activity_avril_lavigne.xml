@@ -10,10 +10,10 @@
         android:id="@+id/avril_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:onClick="goHome"
         android:text="Avril Lavigne"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/avril_bigImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,47 +23,46 @@
         android:id="@+id/avril_bigImageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:layout_marginTop="50dp"
         android:onClick="goHome"
-        app:layout_constraintBottom_toTopOf="@+id/avril_editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/avril_text"
         app:srcCompat="@drawable/avril_lavigne" />
 
-    <EditText
-        android:id="@+id/avril_editText"
+    <Button
+        android:id="@+id/avril_savebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Leave a Comment"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/avril_savebtn"
+        android:layout_marginBottom="32dp"
+        android:onClick="goHome"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/avril_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/avril_bigImageView" />
 
-    <Button
-        android:id="@+id/avril_savebtn"
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.hessercan.myapplication.LogoFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="goHome"
-        android:text="Save"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/avril_editText" />
+        tools:layout="@layout/fragment_logo" />
 
-    <fragment
-        android:id="@+id/logoFragAvril"
-        android:name="com.hessercan.myapplication.LogoFragment"
-        android:layout_width="356dp"
-        android:layout_height="21dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/avril_savebtn" />
 </android.support.constraint.ConstraintLayout>
