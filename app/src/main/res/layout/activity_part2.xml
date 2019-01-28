@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Part2Activity">
+
+    <Button
+        android:id="@+id/sendEmail_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:onClick="sendEmail"
+        android:text="Send Email"
+        app:layout_constraintBottom_toTopOf="@+id/openMaps_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/openMaps_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:onClick="openMaps"
+        android:text="Open Maps"
+        app:layout_constraintBottom_toTopOf="@+id/openGoogle_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendEmail_btn" />
+
+    <Button
+        android:id="@+id/openGoogle_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:onClick="openGoogleSearch"
+        android:text="Open Google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openMaps_btn" />
+
+    <fragment
+        android:id="@+id/fragment5"
+        android:name="com.hessercan.myapplication.LogoFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_logo" />
+</android.support.constraint.ConstraintLayout>

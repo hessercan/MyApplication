@@ -83,6 +83,11 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    public void startPartTwo(View view) {
+        Intent partTwoIntent = new Intent(this, Part2Activity.class);
+        startActivity(partTwoIntent);
+    }
+
     public void loadData() {
         TextView welcomeUser = findViewById(R.id.welcomeUser_TextView);
         welcomeUser.setText("Welcome: " + getUsername());
