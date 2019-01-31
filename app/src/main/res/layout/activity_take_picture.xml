@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TakePicture">
+
+    <Button
+        android:id="@+id/capture-btn"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="takePicture"
+        android:text="Capture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveCapture-btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/saveCapture-btn"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="savePictureEvent"
+        android:text="Save Capture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/capture-btn" />
+
+    <ImageView
+        android:id="@+id/capture_ImageView"
+        android:layout_width="350dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+</android.support.constraint.ConstraintLayout>

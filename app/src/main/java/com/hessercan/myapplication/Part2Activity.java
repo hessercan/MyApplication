@@ -2,13 +2,16 @@ package com.hessercan.myapplication;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 public class Part2Activity extends AppCompatActivity {
 
     private final String SUBJECT = "Help Me with My Application";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,5 +39,11 @@ public class Part2Activity extends AppCompatActivity {
         Intent googleIntent = new Intent(Intent.ACTION_VIEW);
         googleIntent.setData(Uri.parse(url));
         startActivity(googleIntent);
+    }
+
+    public void takePicture(View view) {
+        Intent takePictureIntent = new Intent(this, TakePicture.class);
+        startActivity(takePictureIntent);
+        finish();
     }
 }

@@ -12,11 +12,23 @@
         android:layout_height="50dp"
         android:onClick="sendEmail"
         android:text="Send Email"
-        app:layout_constraintBottom_toTopOf="@+id/openMaps_btn"
+        app:layout_constraintBottom_toTopOf="@+id/takePicture_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/takePicture_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:onClick="takePicture"
+        android:text="Take Picture"
+        app:layout_constraintBottom_toTopOf="@+id/openMaps_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendEmail_btn" />
 
     <Button
         android:id="@+id/openMaps_btn"
@@ -28,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sendEmail_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/takePicture_btn" />
 
     <Button
         android:id="@+id/openGoogle_btn"
