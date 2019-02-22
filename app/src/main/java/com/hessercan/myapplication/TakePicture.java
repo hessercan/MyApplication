@@ -31,6 +31,8 @@ public class TakePicture extends AppCompatActivity {
     ImageView mImageView;
     static final int REQUEST_EXTERNAL_STORAGE = 3;
 
+    private static final String AUTHORITY = BuildConfig.APPLICATION_ID+".fileprovider";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,7 +92,7 @@ public class TakePicture extends AppCompatActivity {
             }
 
             if (photoFile != null) {
-                Uri photoURI = FileProvider.getUriForFile(this, "com.hessercan.myapplication.TakePicture", photoFile);
+                Uri photoURI = FileProvider.getUriForFile(this, AUTHORITY, photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
 
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);

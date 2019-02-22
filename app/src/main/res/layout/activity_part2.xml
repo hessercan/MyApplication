@@ -10,30 +10,46 @@
         android:id="@+id/sendEmail_btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:background="@android:color/holo_red_light"
         android:onClick="sendEmail"
         android:text="Send Email"
-        app:layout_constraintBottom_toTopOf="@+id/takePicture_btn"
+        app:layout_constraintBottom_toTopOf="@+id/fileList_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/takePicture_btn"
+        android:id="@+id/fileList_btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:onClick="takePicture"
-        android:text="Take Picture"
-        app:layout_constraintBottom_toTopOf="@+id/openMaps_btn"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="listFiles"
+        android:text="List Files"
+        app:layout_constraintBottom_toTopOf="@+id/takePicture_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sendEmail_btn" />
 
     <Button
+        android:id="@+id/takePicture_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_green_light"
+        android:onClick="takePicture"
+        android:text="Take Picture"
+        app:layout_constraintBottom_toTopOf="@+id/openMaps_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fileList_btn" />
+
+    <Button
         android:id="@+id/openMaps_btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:background="@android:color/holo_blue_light"
         android:onClick="openMaps"
         android:text="Open Maps"
         app:layout_constraintBottom_toTopOf="@+id/openGoogle_btn"
@@ -46,23 +62,43 @@
         android:id="@+id/openGoogle_btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:background="@android:color/holo_purple"
         android:onClick="openGoogleSearch"
         android:text="Open Google"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/openScenes_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/openMaps_btn" />
+
+    <Button
+        android:id="@+id/openScenes_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="openScenes"
+        android:text="Open Scenes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openGoogle_btn" />
 
     <fragment
         android:id="@+id/fragment5"
         android:name="com.hessercan.myapplication.LogoFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.987"
         tools:layout="@layout/fragment_logo" />
+
 </android.support.constraint.ConstraintLayout>

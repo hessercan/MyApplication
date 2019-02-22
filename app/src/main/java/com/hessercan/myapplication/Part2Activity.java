@@ -2,16 +2,13 @@ package com.hessercan.myapplication;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 
 public class Part2Activity extends AppCompatActivity {
 
     private final String SUBJECT = "Help Me with My Application";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +41,17 @@ public class Part2Activity extends AppCompatActivity {
     public void takePicture(View view) {
         Intent takePictureIntent = new Intent(this, TakePicture.class);
         startActivity(takePictureIntent);
-        finish();
+
+    }
+
+    public void listFiles(View view) {
+        Intent listFilesIntent = new Intent(this, ListFilesActivity.class);
+        startActivity(listFilesIntent);
+
+    }
+
+    public void openScenes(View view) {
+        Intent openScenesIntent = new Intent(this, ScenesActivity.class);
+        startActivity(openScenesIntent);
     }
 }

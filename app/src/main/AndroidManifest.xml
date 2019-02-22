@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.hessercan.myapplication">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -10,9 +11,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".SceneTransCustomActivity"></activity>
+        <activity android:name=".SceneTrans2Activity" />
+        <activity android:name=".SceneTrans1Activity" />
+        <activity android:name=".ScenesActivity" />
+        <activity android:name=".ListFilesActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
 
-        <activity android:name=".TakePicture"></activity>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.OPENABLE" />
+
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TakePicture" />
         <activity android:name=".Part2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -28,14 +44,13 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.hessercan.myapplication.TakePicture"
+            android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"></meta-data>
+                android:resource="@xml/file_paths" />
         </provider>
-
     </application>
 
 </manifest>
