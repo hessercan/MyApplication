@@ -54,7 +54,7 @@
 
     <fragment
         android:id="@+id/fragment2"
-        android:name="com.hessercan.myapplication.LogoFragment"
+        android:name="com.hessercan.hessercanandroid.LogoFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

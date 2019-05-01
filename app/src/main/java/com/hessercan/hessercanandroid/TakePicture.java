@@ -1,4 +1,4 @@
-package com.hessercan.myapplication;
+package com.hessercan.hessercanandroid;
 
 import android.Manifest;
 import android.content.Intent;
@@ -156,6 +156,9 @@ public class TakePicture extends AppCompatActivity {
     private void toastMessage(String message, int length) {
         if (length == 0 || length == 1) {
             Toast.makeText(this,message,length).show();
+        }
+        else {
+            Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
         }
     }
 }

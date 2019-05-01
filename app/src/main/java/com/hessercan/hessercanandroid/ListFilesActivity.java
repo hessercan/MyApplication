@@ -1,4 +1,4 @@
-package com.hessercan.myapplication;
+package com.hessercan.hessercanandroid;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -33,7 +33,7 @@ public class ListFilesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_files);
 
-        mResultIntent = new Intent("com.hessercan.myapplication.ACTION_RETURN_FILE");
+        mResultIntent = new Intent("com.hessercan.hessercanandroid.ACTION_RETURN_FILE");
 
         mImagesDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
 
@@ -42,7 +42,11 @@ public class ListFilesActivity extends AppCompatActivity {
         setResult(Activity.RESULT_CANCELED, null);
 
         int i = 0;
-        mImageFilenames = new String[mImageFiles.length];
+        if (mImageFiles != null)
+            mImageFilenames = new String[mImageFiles.length];
+        else
+            mImageFilenames = new String[]{"No Files Found."};
+
         try {
             for (File f : mImageFiles) {
                 mImageFilenames[i] = f.getAbsolutePath();
@@ -55,6 +59,7 @@ public class ListFilesActivity extends AppCompatActivity {
         ListView mFileListView = findViewById(R.id.mFileListView);
 
         final List<String> fileList = new ArrayList<>(Arrays.asList(mImageFilenames));
+
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, fileList);
 
         mFileListView.setAdapter(arrayAdapter);

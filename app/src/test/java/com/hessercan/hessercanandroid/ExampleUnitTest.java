@@ -1,4 +1,4 @@
-package com.hessercan.myapplication;
+package com.hessercan.hessercanandroid;
 
 import org.junit.Test;
 

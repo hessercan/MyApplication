@@ -1,4 +1,4 @@
-package com.hessercan.myapplication;
+package com.hessercan.hessercanandroid;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

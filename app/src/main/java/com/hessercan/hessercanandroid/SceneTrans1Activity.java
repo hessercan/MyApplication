@@ -1,9 +1,8 @@
-package com.hessercan.myapplication;
+package com.hessercan.hessercanandroid;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.Fade;
-import android.view.Window;
 
 public class SceneTrans1Activity extends AppCompatActivity {
 

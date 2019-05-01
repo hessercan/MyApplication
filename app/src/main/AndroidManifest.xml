@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hessercan.myapplication">
+    package="com.hessercan.hessercanandroid">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="HesserCAN Android"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SceneTransCustomActivity"></activity>
-        <activity android:name=".SceneTrans2Activity" />
-        <activity android:name=".SceneTrans1Activity" />
-        <activity android:name=".ScenesActivity" />
-        <activity android:name=".ListFilesActivity">
+        <activity android:name="com.hessercan.hessercanandroid.SceneTransCustomActivity"></activity>
+        <activity android:name="com.hessercan.hessercanandroid.SceneTrans2Activity" />
+        <activity android:name="com.hessercan.hessercanandroid.SceneTrans1Activity" />
+        <activity android:name="com.hessercan.hessercanandroid.ScenesActivity" />
+        <activity android:name="com.hessercan.hessercanandroid.ListFilesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.PICK" />
 
@@ -28,19 +28,19 @@
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-        <activity android:name=".TakePicture" />
-        <activity android:name=".Part2Activity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.hessercan.hessercanandroid.TakePicture" />
+        <activity android:name="com.hessercan.hessercanandroid.Part2Activity" />
+        <activity android:name="com.hessercan.hessercanandroid.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".AvrilLavigne" />
-        <activity android:name=".BonJovi" />
-        <activity android:name=".OldVersion" />
+        <activity android:name="com.hessercan.hessercanandroid.LoginActivity" />
+        <activity android:name="com.hessercan.hessercanandroid.AvrilLavigne" />
+        <activity android:name="com.hessercan.hessercanandroid.BonJovi" />
+        <activity android:name="com.hessercan.hessercanandroid.OldVersion" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
